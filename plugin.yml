@@ -1,0 +1,25 @@
+name: Announcer
+main: TStark\Announcer\Main
+version: 1.0.0
+api: 5.0.0
+author: §bT. Stark
+description: §6Show informational ads in the ActionBar.
+website: §ahttps://mcpetools.surge.sh
+
+commands:
+  newad:
+    description: "Create a new ad."
+    usage: "/newad <id> <mesagge> <interval>"
+    permission: announcer.admin
+  deletad:
+    description: "Delete an existing ad."
+    usage: "/deletead <id>"
+    permission: announcer.admin
+  ads:
+    description: "Shows the list of ads."
+    usage: "/ads"
+    permission: announcer.admin
+permissions:
+  announcer.admin:
+    description: Permission to manage ads.
+    default:op
