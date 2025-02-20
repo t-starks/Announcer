@@ -15,7 +15,6 @@ class Main extends PluginBase {
     private $ads;
 
     public function onEnable(): void {
-        $this->getLogger()->info(TextFormat::AQUA . "Developed by T. Stark");
         $this->ads = new Config($this->getDataFolder() . "ads.yml", Config::YAML, []);
         foreach ($this->ads->getAll() as $id => $data) {
             $this->scheduleAd($id, $data['message'], $data['interval']);
@@ -23,7 +22,6 @@ class Main extends PluginBase {
     }
 
     public function onDisable(): void {
-        $this->getLogger()->info(TextFormat::RED . "System Closed");
         $this->getScheduler()->cancelAllTasks();
     }
 
